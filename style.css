@@ -1,0 +1,450 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+}
+
+a {
+  transition: color 0.2s ease;
+}
+
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+}
+
+.logo img {
+  height: 50px;
+}
+
+nav a {
+  color: #098e19;
+  margin-left: 25px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Hero */
+.hero {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  color: #098e19;
+}
+
+.hero p {
+  margin-top: 15px;
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+.cta {
+  margin-top: 30px;
+  padding: 12px 30px;
+  border: 2px solid #098e19;
+  color: #098e19;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background 0.2s ease;
+}
+
+.cta:hover {
+  background-color: #098e19;
+  color: #000;
+}
+
+/* About */
+.about {
+  padding: 80px 40px;
+  text-align: center;
+}
+
+.about h2 {
+  color: #098e19;
+  margin-bottom: 20px;
+}
+
+/* Footer */
+.footer {
+  padding: 30px;
+  text-align: center;
+  border-top: 1px solid #222;
+}
+
+.socials a {
+  margin: 0 10px;
+  color: #098e19;
+  text-decoration: none;
+}
+
+.socials a:hover {
+  text-decoration: underline;
+}
+
+/* Glow Animation */
+@keyframes glow {
+  0% { text-shadow: 0 0 5px #098e19; }
+  50% { text-shadow: 0 0 20px #098e19; }
+  100% { text-shadow: 0 0 5px #098e19; }
+}
+
+.hero h1 {
+  animation: glow 2.5s infinite ease-in-out;
+}
+
+/* =========================
+   CONTACT PAGE STYLES
+========================= */
+
+.contact {
+  min-height: 100vh;
+  padding: 80px 20px;
+  text-align: center;
+  background: #000;
+}
+
+.contact h1 {
+  color: #098e19;
+  margin-bottom: 10px;
+}
+
+.contact p {
+  color: #ccc;
+  margin-bottom: 40px;
+}
+
+.contact form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact input,
+.contact textarea {
+  background: #111;
+  border: 1px solid #222;
+  color: #fff;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.contact textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.contact button {
+  background: transparent;
+  border: 2px solid #098e19;
+  color: #098e19;
+  padding: 12px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.contact button:hover {
+  background: #098e19;
+  color: #000;
+}
+
+/* =========================
+   MERCH PAGE STYLES
+========================= */
+
+.coming-soon {
+  min-height: 100vh;
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.coming-soon h1 {
+  font-size: 3rem;
+  color: #098e19;
+  margin-bottom: 15px;
+}
+
+.coming-soon p {
+  color: #ccc;
+  margin-bottom: 10px;
+}
+
+.coming-soon span {
+  color: #666;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+/* =========================
+   TEAM / PLAYER CARDS
+========================= */
+
+.team {
+  padding: 60px 40px 30px;
+  text-align: center;
+}
+
+.team h1 {
+  color: #098e19;
+  margin-bottom: 35px;
+}
+
+.player-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.player-card {
+  background: #0b0b0b;
+  border: 1px solid #222;
+  border-radius: 12px;
+  padding: 30px 20px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.player-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 20px rgba(9, 142, 25, 0.4);
+}
+
+.player-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.player-card h2 {
+  color: #098e19;
+  margin-bottom: 8px;
+}
+
+.player-card p {
+  color: #ccc;
+  margin-bottom: 6px;
+}
+
+.player-card span {
+  color: #666;
+  font-size: 0.85rem;
+}
+
+/* =========================
+   PAGE LOAD ANIMATION
+========================= */
+
+.fade-in {
+  animation: fadeIn 0.6s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* =========================
+   PLAYER CARDS (ADVANCED)
+========================= */
+
+.character-icon {
+  width: 80px;
+  margin-bottom: 15px;
+}
+
+.stats {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0;
+  color: #ccc;
+  font-size: 0.85rem;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.socials a {
+  color: #098e19;
+  text-decoration: none;
+  font-size: 0.9rem;
+  border-bottom: 1px solid transparent;
+}
+
+.socials a:hover {
+  border-bottom: 1px solid #098e19;
+}
+
+/* =========================
+   ORG / STAFF SECTION
+========================= */
+
+.org {
+  padding: 30px 40px 60px;
+  text-align: center;
+}
+
+.org h2 {
+  color: #098e19;
+  margin-bottom: 25px;
+}
+
+.org-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.org-card {
+  background: #0b0b0b;
+  border: 1px solid #222;
+  padding: 25px 40px;
+  border-radius: 10px;
+}
+
+.org-card h3 {
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+.org-card span {
+  color: #666;
+  font-size: 0.85rem;
+}
+
+/* =========================
+   SUPERMAJOR-STYLE PLAYER CARD
+========================= */
+
+.smash-style {
+      position: relative;
+      height: 400px;
+      overflow: hidden;
+    }
+
+    /* Character Image Layer - crops at mid-torso */
+    .character-wrap {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 280px;
+      height: 200px;
+      overflow: hidden;
+      pointer-events: none;
+    }
+
+    .character-wrap img {
+      width: 100%;
+      height: auto;
+      display: block;
+      opacity: 0.95;
+    }
+
+    /* Nameplate Overlay - positioned to overlap character */
+    .nameplate {
+      position: absolute;
+      top: 160px;
+      left: 15px;
+      right: 15px;
+      background: rgba(0, 0, 0, 0.75);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(9, 142, 25, 0.5);
+      padding: 14px 18px;
+      border-radius: 8px;
+      z-index: 10;
+    }
+
+    .nameplate h2 {
+      color: #098e19;
+      font-size: 1.2rem;
+      margin: 0 0 4px 0;
+      font-weight: 600;
+    }
+
+    .nameplate span {
+      color: #aaa;
+      font-size: 0.85rem;
+    }
+
+    /* Stats Area */
+    .stats {
+      position: absolute;
+      top: 250px;
+      left: 15px;
+      right: 15px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+
+    .stats li {
+      margin-bottom: 8px;
+    }
+
+    .stats strong {
+      color: #fff;
+    }
+
+    /* Socials at bottom */
+    .teamsocials {
+      position: absolute;
+      bottom: 15px;
+      left: 15px;
+      right: 15px;
+      display: flex;
+      gap: 10px;
+    }
+
+    .teamsocials a {
+      flex: 1;
+      padding: 10px;
+      text-align: center;
+      background: rgba(9, 142, 25, 0.2);
+      color: #098e19;
+      text-decoration: none;
+      border-radius: 6px;
+      border: 1px solid rgba(9, 142, 25, 0.3);
+      font-size: 0.85rem;
+      transition: all 0.2s;
+    }
+
+    .teamsocials a:hover {
+      background: rgba(9, 142, 25, 0.3);
+      border-color: rgba(9, 142, 25, 0.5);
+    }
