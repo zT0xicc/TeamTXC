@@ -23,6 +23,16 @@
   plausible.init()
 </script>
 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RTHMW68FNP"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-RTHMW68FNP');
+</script>
+
 </head>
 <body class="fade-in">
 
@@ -42,7 +52,27 @@
   <section class="hero">
     <h1>TEAM TXC</h1>
     <p>Competing. Creating. Building Culture.</p>
-    <a class="cta" href="/contact/">Contact Us</a>
+    <div class="cta-buttons">
+  <a href="https://discord.gg/YOURINVITECODE"
+   class="btn discord"
+   target="_blank"
+   onclick="gtag('event', 'click', {
+     event_category: 'CTA',
+     event_label: 'Join Discord'
+   });">
+   Join Discord
+</a>
+
+  <a href="/contact/"
+   class="btn contact-btn"
+   onclick="gtag('event', 'click', {
+     event_category: 'CTA',
+     event_label: 'Contact Us'
+   });">
+   Contact Us
+</a>
+
+</div>
   </section>
 
   <section class="about">
@@ -56,9 +86,9 @@
   <footer class="footer">
     <p>© 2026 Team TXC. All rights reserved.</p>
     <div class="socials">
-      <a href="https://www.instagram.com/teamtxcgram/">Instagram</a>
-      <a href="https://x.com/ItsTeamTXC">X (Twitter)</a>
-      <a href="https://www.twitch.tv/TXCTeamToxic">Twitch</a>
+      <a href="https://www.instagram.com/teamtxcgram/" target="_blank">Instagram</a>
+      <a href="https://x.com/ItsTeamTXC" target="_blank">X (Twitter)</a>
+      <a href="https://www.twitch.tv/TXCTeamToxic" target="_blank">Twitch</a>
     </div>
   </footer>
 
