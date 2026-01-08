@@ -46,17 +46,85 @@ nav a:hover {
   justify-content: center;
   align-items: center;
   text-align: center;
+  background: radial-gradient(circle at top, #0b0b0b, #000);
 }
 
-.hero h1 {
+/* Title animation */
+.hero-title {
   font-size: 4rem;
   color: #098e19;
+  letter-spacing: 1px;
+  animation: heroSlideUp 0.8s ease-out forwards;
 }
 
-.hero p {
-  margin-top: 15px;
+/* Divider animation */
+.hero-divider {
+  width: 0;
+  height: 3px;
+  background: #098e19;
+  margin: 18px auto;
+  animation: dividerGrow 0.8s ease forwards;
+  animation-delay: 0.25s;
+}
+
+/* Tagline animation */
+.hero-tagline {
   font-size: 1.2rem;
   color: #ccc;
+  animation: heroFadeIn 1.2s ease forwards;
+  animation-delay: 0.5s;
+  opacity: 0;
+}
+
+#rotating-text {
+  display: inline-block;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.fade-out {
+  opacity: 0;
+  transform: translateY(4px);
+}
+
+.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes heroSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes dividerGrow {
+  from {
+    width: 0;
+  }
+  to {
+    width: 80px;
+  }
+}
+
+@keyframes heroFadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.8rem;
+  }
+
+  .hero-tagline {
+    font-size: 1rem;
+  }
 }
 
 .cta {
@@ -335,6 +403,16 @@ nav a:hover {
   border-radius: 10px;
 }
 
+.org-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.org-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 18px rgba(9, 142, 25, 0.25);
+}
+
+
 .org-card h3 {
   color: #fff;
   margin-bottom: 5px;
@@ -345,9 +423,36 @@ nav a:hover {
   font-size: 0.85rem;
 }
 
+.org-socials {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.org-socials a {
+  font-size: 0.85rem;
+  color: #098e19;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.org-socials a:hover {
+  border-bottom: 1px solid #098e19;
+}
+
+
 /* =========================
    SUPERMAJOR-STYLE PLAYER CARD
 ========================= */
+
+.team-subtext {
+  color: #aaa;
+  font-size: 0.95rem;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
 
 .smash-style {
       position: relative;
@@ -356,7 +461,7 @@ nav a:hover {
     }
 
     /* Character Image Layer - crops at mid-torso */
-    .character-wrap {
+.character-wrap {
       position: absolute;
       top: 0;
       left: 50%;
@@ -367,7 +472,7 @@ nav a:hover {
       pointer-events: none;
     }
 
-    .character-wrap img {
+.character-wrap img {
       width: 100%;
       height: auto;
       display: block;
@@ -375,7 +480,7 @@ nav a:hover {
     }
 
     /* Nameplate Overlay - positioned to overlap character */
-    .nameplate {
+.nameplate {
       position: absolute;
       top: 160px;
       left: 15px;
@@ -388,20 +493,20 @@ nav a:hover {
       z-index: 10;
     }
 
-    .nameplate h2 {
+.nameplate h2 {
       color: #098e19;
       font-size: 1.2rem;
       margin: 0 0 4px 0;
       font-weight: 600;
     }
 
-    .nameplate span {
+.nameplate span {
       color: #aaa;
       font-size: 0.85rem;
     }
 
     /* Stats Area */
-    .stats {
+.stats {
       position: absolute;
       top: 250px;
       left: 15px;
@@ -413,16 +518,16 @@ nav a:hover {
       color: #ccc;
     }
 
-    .stats li {
+.stats li {
       margin-bottom: 8px;
     }
 
-    .stats strong {
+.stats strong {
       color: #fff;
     }
 
     /* Socials at bottom */
-    .teamsocials {
+.teamsocials {
       position: absolute;
       bottom: 15px;
       left: 15px;
@@ -431,7 +536,7 @@ nav a:hover {
       gap: 10px;
     }
 
-    .teamsocials a {
+.teamsocials a {
       flex: 1;
       padding: 10px;
       text-align: center;
@@ -444,7 +549,7 @@ nav a:hover {
       transition: all 0.2s;
     }
 
-    .teamsocials a:hover {
+.teamsocials a:hover {
       background: rgba(9, 142, 25, 0.3);
       border-color: rgba(9, 142, 25, 0.5);
     }
@@ -491,4 +596,24 @@ nav a:hover {
 .btn.contact-btn:hover {
   background: #098e19;
   color: #000;
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    padding: 15px 20px;
+  }
+
+  nav a {
+    margin-left: 15px;
+    font-size: 0.9rem;
+  }
+
+  .player-grid {
+    gap: 20px;
+  }
+
+  .org-card {
+    width: 100%;
+    max-width: 300px;
+  }
 }
