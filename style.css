@@ -371,6 +371,46 @@ nav a:hover {
   font-size: 0.85rem;
 }
 
+.stats-buttons {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  right: 15px;
+  display: flex;
+  gap: 10px;
+}
+
+.supermajor-link,
+.smashgg-link {
+  flex: 1;
+  height: 50px;
+  padding: 6px;
+  text-align: center;
+  background: rgba(9, 142, 25, 0.2);
+  text-decoration: none;
+  border-radius: 6px;
+  border: 1px solid rgba(9, 142, 25, 0.3);
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.supermajor-link img,
+.smashgg-link img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+}
+
+.supermajor-link:hover,
+.smashgg-link:hover {
+  background: rgba(9, 142, 25, 0.3);
+  border-color: rgba(9, 142, 25, 0.5);
+}
+
+
 .socials {
   display: flex;
   justify-content: center;
@@ -542,7 +582,7 @@ nav a:hover {
     /* Socials at bottom */
 .teamsocials {
       position: absolute;
-      bottom: 15px;
+      bottom: 65px;
       left: 15px;
       right: 15px;
       display: flex;
