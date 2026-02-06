@@ -2,12 +2,23 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: "Sora", Arial, sans-serif;
+}
+
+:root {
+  --brand-green: #098e19;
+  --bg-dark: #000;
+  --bg-elevated: #0b0b0b;
+  --text-primary: #fff;
+  --text-muted: #ccc;
+  --border-subtle: #222;
 }
 
 body {
-  background-color: #000;
-  color: #fff;
+  background-color: var(--bg-dark);
+  color: var(--text-primary);
+  line-height: 1.6;
+  letter-spacing: 0.2px;
 }
 
 a {
@@ -15,12 +26,23 @@ a {
 }
 
 
+/* Layout */
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
 /* Navbar */
 .navbar {
+  padding: 20px 0;
+}
+
+.navbar-inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 40px;
+  gap: 20px;
 }
 
 .logo img {
@@ -28,10 +50,11 @@ a {
 }
 
 nav a {
-  color: #098e19;
+  color: var(--brand-green);
   margin-left: 25px;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
 
 nav a:hover {
@@ -47,40 +70,41 @@ nav a:hover {
   align-items: center;
   text-align: center;
   background:
-    radial-gradient(circle at center, rgba(9,142,25,0.08), transparent 60%),
+    radial-gradient(circle at center, rgba(9,142,25,0.12), transparent 60%),
     linear-gradient(#000, #000);
 }
 
 /* Title animation */
 .hero-title {
-  font-size: 4rem;
-  color: #098e19;
-  letter-spacing: 1px;
-  animation: heroSlideUp 0.8s ease-out forwards;
+  font-size: clamp(2.8rem, 5vw, 4.5rem);
+  color: var(--brand-green);
+  letter-spacing: 2px;
+  font-weight: 800;
+  animation: heroSlideUp 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 /* Divider animation */
 .hero-divider {
   width: 0;
   height: 3px;
-  background: #098e19;
+  background: var(--brand-green);
   margin: 18px auto;
-  animation: dividerGrow 0.8s ease forwards;
-  animation-delay: 0.25s;
+  animation: dividerGrow 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: 0.2s;
 }
 
 /* Tagline animation */
 .hero-tagline {
-  font-size: 1.2rem;
-  color: #ccc;
-  animation: heroFadeIn 1.2s ease forwards;
-  animation-delay: 0.5s;
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  animation: heroFadeIn 1.1s ease-out forwards;
+  animation-delay: 0.45s;
   opacity: 0;
 }
 
 #rotating-text {
   display: inline-block;
-  transition: opacity 0.4s ease, transform 0.4s ease;
+  transition: opacity 0.35s ease, transform 0.35s ease;
 }
 
 .fade-out {
@@ -120,52 +144,104 @@ nav a:hover {
 }
 
 @media (max-width: 768px) {
-  .hero-title {
-    font-size: 2.8rem;
-  }
-
   .hero-tagline {
     font-size: 1rem;
   }
+
+  .navbar-inner {
+    flex-direction: column;
+  }
+
+  nav a {
+    margin-left: 16px;
+  }
+}
+
+.cta-buttons {
+  margin-top: 30px;
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btn {
+  padding: 12px 30px;
+  border: 2px solid var(--brand-green);
+  color: var(--brand-green);
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 8px;
+  letter-spacing: 0.6px;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+  background-color: var(--brand-green);
+  color: #000;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(9, 142, 25, 0.25);
+}
+
+.btn.discord {
+  background: rgba(9, 142, 25, 0.12);
+  border-color: transparent;
+}
+
+.btn.contact-btn {
+  border-color: #fff;
+  color: #fff;
+}
+
+.btn.contact-btn:hover {
+  background: #fff;
+  color: #000;
 }
 
 .cta {
   margin-top: 30px;
   padding: 12px 30px;
-  border: 2px solid #098e19;
-  color: #098e19;
+  border: 2px solid var(--brand-green);
+  color: var(--brand-green);
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 700;
   border-radius: 6px;
   transition: background 0.2s ease;
 }
 
 .cta:hover {
-  background-color: #098e19;
+  background-color: var(--brand-green);
   color: #000;
 }
 
 /* About */
 .about {
-  padding: 80px 40px;
+  padding: 80px 0;
   text-align: center;
 }
 
 .about h2 {
-  color: #098e19;
+  color: var(--brand-green);
   margin-bottom: 20px;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.about p {
+  color: var(--text-muted);
+  font-size: 1.05rem;
 }
 
 /* Footer */
 .footer {
-  padding: 30px;
+  padding: 30px 0 40px;
   text-align: center;
-  border-top: 1px solid #222;
+  border-top: 1px solid var(--border-subtle);
 }
 
 .socials a {
   margin: 0 10px;
-  color: #098e19;
+  color: var(--brand-green);
   text-decoration: none;
 }
 
@@ -175,19 +251,19 @@ nav a:hover {
 
 /* Glow Animation */
 @keyframes glow {
-  0% { text-shadow: 0 0 5px #098e19; }
-  50% { text-shadow: 0 0 20px #098e19; }
-  100% { text-shadow: 0 0 5px #098e19; }
+  0% { text-shadow: 0 0 4px rgba(9, 142, 25, 0.6); }
+  50% { text-shadow: 0 0 16px rgba(9, 142, 25, 0.55); }
+  100% { text-shadow: 0 0 4px rgba(9, 142, 25, 0.6); }
 }
 
 .hero h1 {
-  animation: glow 2.5s infinite ease-in-out;
+  animation: glow 3.2s infinite ease-in-out;
 }
 
 .fade-section {
   opacity: 0;
-  transform: translateY(14px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
+  transform: translateY(16px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
 .fade-section.visible {
@@ -509,8 +585,13 @@ nav a:hover {
 
 .smash-style {
       position: relative;
-      height: 400px;
+  min-height: 430px;
+      height: auto;
       overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+  padding: 250px 20px 20px;
     }
 
     /* Character Image Layer - crops at mid-torso */
@@ -535,7 +616,7 @@ nav a:hover {
     /* Nameplate Overlay - positioned to overlap character */
 .nameplate {
       position: absolute;
-      top: 160px;
+  top: 150px;
       left: 15px;
       right: 15px;
       background: rgba(0, 0, 0, 0.75);
@@ -559,16 +640,13 @@ nav a:hover {
     }
 
     /* Stats Area */
-.stats {
-      position: absolute;
-      top: 250px;
-      left: 15px;
-      right: 15px;
+.smash-style .stats {
       margin: 0;
       padding: 0;
       list-style: none;
       font-size: 0.9rem;
       color: #ccc;
+  margin-top: 6px;
     }
 
 .stats li {
@@ -580,11 +658,8 @@ nav a:hover {
     }
 
     /* Socials at bottom */
-.teamsocials {
-      position: absolute;
-      bottom: 65px;
-      left: 15px;
-      right: 15px;
+.smash-style .teamsocials {
+      margin-top: 10px;
       display: flex;
       gap: 10px;
     }
@@ -606,6 +681,11 @@ nav a:hover {
       background: rgba(9, 142, 25, 0.3);
       border-color: rgba(9, 142, 25, 0.5);
     }
+
+.smash-style .stats-buttons {
+  position: static;
+  margin-top: auto;
+}
 
 /* =========================
    CTA BUTTONS
@@ -633,6 +713,7 @@ nav a:hover {
 .btn.discord {
   background: #5865F2;
   color: #fff;
+  border: none;
 }
 
 .btn.discord:hover {
