@@ -332,6 +332,78 @@ nav a:hover {
 }
 
 /* =========================
+   SOCIALS PAGE STYLES
+========================= */
+
+.socials-page {
+  min-height: 100vh;
+  padding: 80px 20px;
+  text-align: center;
+  background:
+    radial-gradient(circle at center, rgba(9, 142, 25, 0.14), transparent 58%),
+    linear-gradient(#000, #000);
+}
+
+.socials-page h1 {
+  color: #098e19;
+  margin-bottom: 10px;
+}
+
+.socials-page p {
+  color: #ccc;
+  margin-bottom: 34px;
+}
+
+.social-links {
+  max-width: 420px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.social-link-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 12px 22px;
+  border: 2px solid #098e19;
+  color: #098e19;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 999px;
+  letter-spacing: 0.4px;
+  background: rgba(9, 142, 25, 0.1);
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.social-link-btn:hover {
+  background: #098e19;
+  color: #000;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(9, 142, 25, 0.25);
+}
+
+.social-link-btn img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.social-link-btn.youtube img {
+  width: 28px;
+}
+
+.social-link-btn.x img {
+  filter: invert(62%) sepia(80%) saturate(742%) hue-rotate(80deg) brightness(78%) contrast(95%);
+}
+
+.social-link-btn:hover img {
+  filter: none;
+}
+
+/* =========================
    MERCH PAGE STYLES
 ========================= */
 
@@ -732,6 +804,12 @@ nav a:hover {
   color: #000;
 }
 
+.section-glow-bg {
+  background:
+    radial-gradient(circle at center, rgba(9, 142, 25, 0.12), transparent 60%),
+    linear-gradient(#000, #000);
+}
+
 @media (max-width: 600px) {
   .navbar {
     padding: 15px 20px;
@@ -749,5 +827,10 @@ nav a:hover {
   .org-card {
     width: 100%;
     max-width: 300px;
+  }
+
+  .social-link-btn {
+    padding: 11px 18px;
+    font-size: 0.92rem;
   }
 }
