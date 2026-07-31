@@ -332,6 +332,70 @@ nav a:hover {
 }
 
 /* =========================
+   SOCIALS PAGE STYLES
+========================= */
+
+.socials-page {
+  min-height: 100vh;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.socials-page h1 {
+  color: #098e19;
+  margin-bottom: 10px;
+}
+
+.socials-page p {
+  color: #ccc;
+  margin-bottom: 36px;
+}
+
+.socials-links {
+  max-width: 480px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.socials-bubble {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 58px;
+  padding: 10px 20px;
+  border-radius: 999px;
+  border: 1px solid rgba(9, 142, 25, 0.45);
+  background: rgba(9, 142, 25, 0.14);
+  color: #098e19;
+  text-decoration: none;
+  font-weight: 700;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+.socials-bubble:hover {
+  transform: translateY(-2px) scale(1.01);
+  background: rgba(9, 142, 25, 0.24);
+  border-color: rgba(9, 142, 25, 0.75);
+  box-shadow: 0 0 22px rgba(9, 142, 25, 0.35);
+}
+
+.socials-logo-placeholder {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px dashed rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.62rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* =========================
    MERCH PAGE STYLES
 ========================= */
 
