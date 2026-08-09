@@ -15,6 +15,12 @@
   </url>
 
   <url>
+    <loc>https://teamtxc.gg/events/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
     <loc>https://teamtxc.gg/merch/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>

@@ -1,0 +1,100 @@
+{
+  "showUpcomingTournament": true,
+  "showRoadEvents": false,
+  "startgg": {
+    "enabled": false,
+    "upcomingEndpoint": ""
+  },
+  "upcomingHostedEvents": [
+    {
+      "name": "The TXC Online Invitational",
+      "game": "Super Smash Bros. Ultimate",
+      "date": "August 29, 2026",
+      "dateIso": "2026-08-29",
+      "location": "US / Online",
+      "registerLabel": "Register",
+      "registerLink": "https://www.start.gg/tournament/the-txc-online-invitational/details"
+    }
+  ],
+  "upcomingFallback": {
+    "title": "Team TXC will be back with another tournament soon.",
+    "subtitle": "Follow our socials for the next announcement and registration link."
+  },
+  "roadFallback": {
+    "title": "TXC IS LOOKING FOR TOURNAMENTS TO CRASH.",
+    "subtitle": "Check back later to see where we're heading next."
+  },
+  "roadEvents": [
+    {
+      "date": "August 16, 2026",
+      "dateIso": "2026-08-16",
+      "name": "Local Tournament",
+      "location": "Somewhere, NY",
+      "game": "Super Smash Bros. Ultimate",
+      "players": "Geodash, JustRice"
+    },
+    {
+      "date": "August 30, 2026",
+      "dateIso": "2026-08-30",
+      "name": "Major Tournament",
+      "location": "New York, NY",
+      "game": "Super Smash Bros. Ultimate",
+      "players": "TXC Players"
+    }
+  ],
+  "pastTournaments": [
+    {
+      "name": "Bowsery #25",
+      "date": "July 07, 2026",
+      "dateIso": "2026-07-07",
+      "hostOrLocation": "New York",
+      "teamResults": [
+        "Geodash - 17th"
+      ],
+      "vodLabel": "Watch on Twitch",
+      "vodLink": "https://www.twitch.tv/videos/2814588466?t=00h21m32s",
+      "bracketLabel": "View on Supermajor",
+      "bracketLink": "https://www.supermajor.gg/ultimate/event/S1662495"
+    },
+    {
+      "name": "Bowsery Arcadian",
+      "date": "July 28, 2026",
+      "dateIso": "2026-07-28",
+      "hostOrLocation": "New York",
+      "teamResults": [
+        "Geodash - 9th"
+      ],
+      "vodLabel": "Watch on Twitch",
+      "vodLink": "https://www.twitch.tv/videos/2831505755?t=00h40m42s",
+      "bracketLabel": "View on Supermajor",
+      "bracketLink": "https://www.supermajor.gg/ultimate/event/S1671281"
+    },
+    {
+      "name": "SOS Arcadian #91 (Dave and Busters)",
+      "date": "April 29, 2026",
+      "dateIso": "2026-04-29",
+      "hostOrLocation": "New York",
+      "teamResults": [
+        "Geodash - 5th"
+      ],
+      "vodLabel": "Watch on YouTube",
+      "vodLink": "https://youtu.be/ALOoWuE1o6c?si=H_9OVx8dKHrnsUvG&t=5995",
+      "bracketLabel": "View on Supermajor",
+      "bracketLink": "https://www.supermajor.gg/ultimate/event/S1611009"
+    },
+    {
+      "name": "Up The Block #140",
+      "date": "July 24, 2026",
+      "dateIso": "2026-07-24",
+      "hostOrLocation": "New York",
+      "teamResults": [
+        "Geodash - 4th",
+        "JustRice15 - 13th"
+      ],
+      "vodLabel": "No Vod Available",
+      "vodLink": "#",
+      "bracketLabel": "View on Supermajor",
+      "bracketLink": "https://www.supermajor.gg/ultimate/event/S1671530"
+    }
+  ]
+}
