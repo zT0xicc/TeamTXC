@@ -1,5 +1,5 @@
 {
-  "showUpcomingTournament": true,
+  "showUpcomingTournament": false,
   "showRoadEvents": false,
   "startgg": {
     "enabled": false,
@@ -95,6 +95,26 @@
       "vodLink": "#",
       "bracketLabel": "View on Supermajor",
       "bracketLink": "https://www.supermajor.gg/ultimate/event/S1671530"
+    },
+    {
+      "name": "The TXC Online Tournament",
+      "date": "August 29, 2026",
+      "dateIso": "2026-08-29",
+      "hostOrLocation": "US / Online",
+      "teamResults": [
+        "Gouki - 1st",
+        "Xcalibur+ - 2nd",
+        "Wessy 1111 - 3rd",
+        "Brain - 4th",
+        "PMP - 5th",
+        "BigDonSkillz - 6th",
+        "Makii - 7th",
+        "JustRice15 - 7th"
+      ],
+      "vodLabel": "Watch on Twitch",
+      "vodLink": "https://www.twitch.tv/videos/2859892214",
+      "bracketLabel": "View on Supermajor",
+      "bracketLink": "https://www.supermajor.gg/ultimate/event/S1682110"
     }
   ]
 }

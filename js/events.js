@@ -173,7 +173,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             <p class="event-meta">${tournament.hostOrLocation}</p>
 
             <div class="event-more">
-              <h3>Team Results</h3>
+              <h3>Match Results</h3>
               ${resultsMarkup}
               <div class="event-links-group">
                 <p><a href="${tournament.vodLink}" target="_blank" rel="noopener noreferrer">VOD: ${tournament.vodLabel} →</a></p>
