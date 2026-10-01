@@ -1,6 +1,6 @@
 {
   "showUpcomingTournament": false,
-  "showRoadEvents": false,
+  "showRoadEvents": true,
   "startgg": {
     "enabled": false,
     "upcomingEndpoint": ""
@@ -26,20 +26,12 @@
   },
   "roadEvents": [
     {
-      "date": "August 16, 2026",
-      "dateIso": "2026-08-16",
-      "name": "Local Tournament",
-      "location": "Somewhere, NY",
-      "game": "Super Smash Bros. Ultimate",
-      "players": "Geodash, JustRice"
-    },
-    {
-      "date": "August 30, 2026",
-      "dateIso": "2026-08-30",
-      "name": "Major Tournament",
+      "date": "October 2, 2026",
+      "dateIso": "2026-10-02",
+      "name": "Pace Esports Club Presents: The Smash Society! 15",
       "location": "New York, NY",
       "game": "Super Smash Bros. Ultimate",
-      "players": "TXC Players"
+      "players": "Geodash, JustRice, Seek"
     }
   ],
   "pastTournaments": [
