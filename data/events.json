@@ -1,19 +1,19 @@
 {
-  "showUpcomingTournament": false,
-  "showRoadEvents": true,
+  "showUpcomingTournament": true,
+  "showRoadEvents": false,
   "startgg": {
     "enabled": false,
     "upcomingEndpoint": ""
   },
   "upcomingHostedEvents": [
     {
-      "name": "The TXC Online Invitational",
+      "name": "Ultimate TXClash #1",
       "game": "Super Smash Bros. Ultimate",
-      "date": "August 29, 2026",
-      "dateIso": "2026-08-29",
+      "date": "October 9, 2026",
+      "dateIso": "2026-10-09",
       "location": "US / Online",
       "registerLabel": "Register",
-      "registerLink": "https://www.start.gg/tournament/the-txc-online-invitational/details"
+      "registerLink": "https://www.start.gg/tournament/utxc"
     }
   ],
   "upcomingFallback": {
@@ -107,6 +107,21 @@
       "vodLink": "https://www.twitch.tv/videos/2859892214",
       "bracketLabel": "View on Supermajor",
       "bracketLink": "https://www.supermajor.gg/ultimate/event/S1682110"
+    },
+    {
+      "name": "Pace Esports Club Presents: The Smash Society! 15",
+      "date": "October 2, 2026",
+      "dateIso": "2026-10-02",
+      "hostOrLocation": "US / Online",
+      "teamResults": [
+        "Geodash - 2nd",
+        "JustRice15 - 13th",
+        "Seek - 17th"
+      ],
+      "vodLabel": "No Vod Available",
+      "vodLink": "#",
+      "bracketLabel": "View on Supermajor",
+      "bracketLink": "https://www.supermajor.gg/ultimate/event/S1716438"
     }
   ]
 }
