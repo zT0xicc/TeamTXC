@@ -1,5 +1,5 @@
 {
-  "showUpcomingTournament": true,
+  "showUpcomingTournament": false,
   "showRoadEvents": false,
   "startgg": {
     "enabled": false,
